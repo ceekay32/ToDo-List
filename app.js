@@ -10,12 +10,12 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(
-  "mongodb+srv://admin-chirag:ck00732fc@todolist.nnrgx.mongodb.net/todolist?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-  }
-);
+var mongourl = "";
+// Enter your mongo url here
+
+mongoose.connect("" + mongourl, {
+  useNewUrlParser: true,
+});
 
 const itemsSchema = {
   name: String,
