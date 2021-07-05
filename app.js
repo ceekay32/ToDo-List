@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 var mongourl = "";
-// Enter your mongo url here
+// Enter your mongo url here.
 
 mongoose.connect("" + mongourl, {
   useNewUrlParser: true,
